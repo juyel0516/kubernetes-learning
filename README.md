@@ -61,9 +61,17 @@ kubectl apply -f=deployment.yaml
 ```shell
 kubectl apply -f service.yaml
 ```
-### 3. Delete resources by yaml file/ Declarative fole [deployment.yaml=Yaml file for running deployment, service.yaml=Yaml file for attaching deployment]
+### 3. Create multiple deployment
+```shell
+kubectl apply -f=deployment.yaml, service.yaml
+```
+### 4. Delete resources by yaml file/ Declarative fole [deployment.yaml=Yaml file for running deployment, service.yaml=Yaml file for attaching deployment]
 ```shell
 kubectl delete -f=deplyment.yaml,service.yaml
+```
+### 5. Delete deployment by labels
+```shell
+kubectl delete deployments,services -l group=second-app-label
 ```
 
 ## Minikube Commands
