@@ -1,6 +1,6 @@
 # kubernetes-learning
 
-## Kubernetes control commands
+## Imperative Approach for Kubernetes control commands
 
 ### 1. Create a deployment [first-app=deployment name, mjuyelrana/kub-first-app=docker hub image name]
 ```shell
@@ -50,6 +50,16 @@ kubctl rollout history deployment/first-app --revision=1
 ### 12. Undo an old deployment 
 ```shell
 kubectl rollout undo deployment/first-app --to-revision=1
+```
+
+## Declarative Approach for kubernetes control
+### 1. Create a deployment by deployment.yaml file
+```shell
+kubectl apply -f=deployment.yaml
+```
+### 2. Create a service by service.yaml file
+```shell
+kubectl apply -f service.yaml
 ```
 
 ## Minikube Commands
