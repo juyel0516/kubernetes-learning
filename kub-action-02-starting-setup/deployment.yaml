@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
         - name: second-node
-          image: mjuyelrana/kub-first-app
+          image: mjuyelrana/kub-first-app:v2
