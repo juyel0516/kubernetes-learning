@@ -61,6 +61,10 @@ kubectl apply -f=deployment.yaml
 ```shell
 kubectl apply -f service.yaml
 ```
+### 3. Delete resources by yaml file/ Declarative fole [deployment.yaml=Yaml file for running deployment, service.yaml=Yaml file for attaching deployment]
+```shell
+kubectl delete -f=deplyment.yaml,service.yaml
+```
 
 ## Minikube Commands
 ### 1. To start or stop minikube 
