@@ -29,7 +29,7 @@ app.post('/story', (req, res) => {
         if (err) {
             return res.status(500).json({message: 'Storing the text failed.'});
         }
-        res.status(201).json({message: 'Text was stored new!'});
+        res.status(201).json({message: 'Text was stored1'});
     });
 });
 
