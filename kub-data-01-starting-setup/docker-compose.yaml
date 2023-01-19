@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  stories-app:
+    build: .
+    image: docker/kub-test
+    container_name: docker-kub-test
+    volumes:
+      - stories:/app/story
+    ports:
+      - 8080:3000
+    networks:
+      - docker-kub-test
+volumes:
+  stories:
+
+networks:
+  docker-kub-test:
+    name: docker-kub-test
+    driver: bridge
