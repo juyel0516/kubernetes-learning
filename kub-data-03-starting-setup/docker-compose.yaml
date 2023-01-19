@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  stroy-app:
+    build: .
+    image: mjuyelrana/kub-data-demo:v1
+    container_name: story-app
+    volumes:
+      - stories:/app/story
+    ports:
+      - 8080:3000
+    networks:
+      - kubernetes-story-app
+volumes:
+  stories:
+
+networks:
+  kubernetes-story-app:
+    name: kubernetes-story-app
+    driver: bridge
