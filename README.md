@@ -85,6 +85,10 @@ kubectl get pv
 ```shell
 kubectl get pvc
 ```
+### 9. Show the configMap 
+```shell
+kubectl get configMap
+```
 
 ## Minikube Commands
 ### 1. To start or stop minikube 
