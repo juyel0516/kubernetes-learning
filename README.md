@@ -67,11 +67,23 @@ kubectl apply -f=deployment.yaml, service.yaml
 ```
 ### 4. Delete resources by yaml file/ Declarative fole [deployment.yaml=Yaml file for running deployment, service.yaml=Yaml file for attaching deployment]
 ```shell
-kubectl delete -f=deplyment.yaml,service.yaml
+kubectl delete -f=deployment.yaml,service.yaml
 ```
 ### 5. Delete deployment by labels
 ```shell
 kubectl delete deployments,services -l group=second-app-label
+```
+### 6. Show default storage class
+```shell
+kubectl get sc
+```
+### 7. Show the persistent volume
+```shell
+kubectl get pv
+```
+### 8. Show the persistent volume claims 
+```shell
+kubectl get pvc
 ```
 
 ## Minikube Commands
