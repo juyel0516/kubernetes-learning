@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  auth:
+    build: ./auth-api
+    container_name: auth-api
+    image: mjuyelrana/kub-auth-demo
+  users:
+    build: ./users-api
+    container_name: users-api
+    image: mjuyelrana/kub-user-demo
+    environment:
+      AUTH_ADDRESS: auth
+      AUTH_SERVICE_SERVICE_HOST: auth
+    ports: 
+      - "8080:8080"
+  tasks:
+    build: ./tasks-api
+    container_name: tasks-api
+    image: mjuyelrana/kub-task-demo
+    ports: 
+      - "8000:8000"
+    environment:
+      TASKS_FOLDER: tasks
+      AUTH_ADDRESS: auth
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    image: mjuyelrana/kub-frontend-demo
+    ports:
+      - "8002:80"
+    
