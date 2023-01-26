@@ -89,6 +89,10 @@ kubectl get pvc
 ```shell
 kubectl get configMap
 ```
+### 10. Show the cluster namespaces/domain name
+```shell
+kubectl get namespaces
+```
 
 ## Minikube Commands
 ### 1. To start or stop minikube 
