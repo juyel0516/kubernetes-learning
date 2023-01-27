@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tasks
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      containers:
+        - name: tasks
+          image: mjuyelrana/kub-task-demo:latest
+          env:
+            - name: AUTH_ADDRESS
+              value: "auth-service.default"
+#              value: "10.101.41.163"
+            - name: TASKS_FOLDER
+              value: tasks
